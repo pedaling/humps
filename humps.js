@@ -46,8 +46,8 @@
       return string.split(options.split).join(separator);
     }
 
-    var result = string.replace(/([A-Z]+)/g, '|$1').replace(/^\|/, '');
-    return result.split('|').join(separator);
+    var result = string.replace(/([A-Z]+)/g, ',$1').replace(/^,/, '');
+    return result.split(',').join(separator);
   };
 
   var camelize = function(string) {
